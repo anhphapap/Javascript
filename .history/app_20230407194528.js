@@ -85,8 +85,7 @@ switch(Number(num))
         break;
 }
 
-let num2=(Number(num)>=18) ? "Adult" : "Young Buffalo";
-console.log(num2);
+
 
 
 

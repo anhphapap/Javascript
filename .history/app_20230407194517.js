@@ -71,7 +71,7 @@ console.log(10 === "10"); //Nên sử dụng === hơn
 // prompt("What???")
 
 //Switch - case
-let num="15";
+let num="11";
 
 switch(Number(num))
 {
@@ -79,14 +79,11 @@ switch(Number(num))
         console.log(`Ans=${num}`);
         break;
     case 15:
-        console.log(`Ans=${num}`);
-        break;
     default:
         break;
 }
 
-let num2=(Number(num)>=18) ? "Adult" : "Young Buffalo";
-console.log(num2);
+
 
 
 

@@ -71,7 +71,7 @@ console.log(10 === "10"); //Nên sử dụng === hơn
 // prompt("What???")
 
 //Switch - case
-let num="15";
+let num="19";
 
 switch(Number(num))
 {

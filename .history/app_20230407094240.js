@@ -61,32 +61,7 @@ console.log(x);
 //Type coercion
 console.log("10"+10);
 
-// == vs ===
-console.log(10 == "10");
-console.log(10 === "10"); //Nên sử dụng === hơn
 
-//Thông báo
-// alert("Hello Bitch!!!");
-// confirm("Are you crazy?");
-// prompt("What???")
-
-//Switch - case
-let num="15";
-
-switch(Number(num))
-{
-    case 11:
-        console.log(`Ans=${num}`);
-        break;
-    case 15:
-        console.log(`Ans=${num}`);
-        break;
-    default:
-        break;
-}
-
-let num2=(Number(num)>=18) ? "Adult" : "Young Buffalo";
-console.log(num2);
 
 
 
