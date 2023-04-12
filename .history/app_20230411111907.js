@@ -88,6 +88,9 @@ switch(Number(num))
 let num2=(Number(num)>=18) ? "Adult" : "Young Buffalo";
 console.log(num2);
 
+//Fun
+
+
 
 
 
