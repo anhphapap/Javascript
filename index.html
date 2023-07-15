@@ -5,8 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
+    <style>
+        .noti{
+            position: fixed;
+            left: 1rem;
+            bottom: 1rem;
+            background-color: white;
+            box-shadow: 0 10px 20px 0 rgb(0,0,0,0.2);
+            width: 20%;
+            height: 20%;
+            border-radius: 10px;
+            padding: 0.8rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+        p{
+            margin: 0;
+        }
+        .noti-close{
+            background-color: #e4e6eb;
+            border-radius: 100rem;
+            height: 15px;
+            width: 15px;
+            padding: 5px;
+            position: relative;
+        }
+        .noti-close svg{
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        .noti-title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .noti-title p{
+            font-weight: 600;
+        }
+        .noti-img{
+            flex: 1;
+        }
+        .noti-img img{
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            border-radius: 100rem;
+        }
+        .noti-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            height: 50%;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        .noti-disc{
+            font-size: 16px;
+            word-break: break-all;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .noti-time{ 
+            color: #1876f2;
+            font-weight: 600;
+            font-size: 12px;
+            position: fixed;
+            left:88px;
+        }
+        .noti-circle{
+            padding: 5px;
+            background-color: #1876f2;
+            border-radius: 100rem;
+        }
+    </style>
 </head>
 <body>
-    <script src="./date.js"></script>
+    <div class="container">
+        <h1>Ola alo</h1>
+        <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quaerat optio eos beatae placeat <strong>numquam</strong> corrupti, iste odit repellendus dignissimos veniam distinctio, iure dicta unde quia molestias ea, quis incidunt!</p>
+    </div>
+    <ul>
+        <li class="item item1">item1</li>
+        <li class="item item2">item2</li>
+        <li class="item item3">item3</li>
+        <li class="item item4">item4</li>
+        <li class="item item5">item5</li>
+    </ul>
+    <div id="idx">OK</div>
+    <a href="https://www.facebook.com/pap.error/" class="link">Anh Pha</a>
+    <a href="https://www.facebook.com/pap.error/" class="link">Anh Pha</a>
+    <a href="https://www.facebook.com/pap.error/" class="link">Anh Pha</a>
+    <a href="https://www.facebook.com/pap.error/" class="link">Anh Pha</a>
+    <div class="noti">
+        <div class="noti-title">
+            <p>Thông báo mới</p>
+            <div class="noti-close">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>                  
+            </div>
+        </div>
+        <div class="noti-content">
+            <div class="noti-img">
+                <img src="https://images.unsplash.com/photo-1687457099221-06f18ad00e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="">
+            </div>
+            <div class="noti-disc">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt consequuntur nam provident, quisquam expedita adipisci autem quis.
+            </div>
+            <div class="noti-circle"></div>
+        </div>
+        <div class="noti-time">
+            vài giây trước
+        </div>
+    </div>
+    <script src="./DOM.js"></script>
 </body>
 </html>

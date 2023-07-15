@@ -1,0 +1,1 @@
+let arr=[1,"abc",True]

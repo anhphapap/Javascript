@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            overflow: hidden;
+        }
+        .btn{
+            width: 180px;
+            padding: 8px 18px;
+            border: 3px solid #e18f35;
+            border-radius: 5px;
+            background-color:#e18f35;
+            text-transform: uppercase;
+            display: inline;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .btn a{
+            color: white;
+            position:relative;
+            z-index: 100;
+        }
+        .btn-top{
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .btn-top::before{
+            content: "";
+            position: absolute;
+            background-color:#f7f5f1 ;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 0;
+            height: 100%;
+            transition: 0.5s;
+        }
+        .fixed_a{
+            transition: 0.5s;
+            color: #e18f35;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .btn-top:hover::before{
+            width: 100%;
+        }
+        .btn:hover a{
+            color: #e18f35;
+        }
+        li{
+            list-style: none;
+            color: #e18f35;
+        }
+        .list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100%;
+        }
+        .container{
+            min-height: 100vh;
+            background-color: rgba(0,0,0,0.3);
+            position: relative;
+            transition: 0.75s;
+            top: 0;
+            right:-100%;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .toggle-menu{
+            position: absolute;
+            right: 0;
+            top:0;
+            width: 400px;
+            height: 100%;
+            background-color: #f7f5f1;
+        }
+        .logo{
+            width: 180px;
+        }
+        .item-text{
+            padding: 10px 60px;
+            border-radius: 100rem;
+        }
+        .item{
+            transition: 0.5;
+        }
+        .item:not(:nth-child(2)):hover{
+            background-color: #e18f35;
+            color: white;
+        }
+        #icon-menu{
+            position: fixed;
+            right: 10px;
+            top:10px;
+            z-index: 100;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+        .active{
+            opacity: 1;
+            right:0;
+            visibility: visible;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <i class='bx bx-menu' id="icon-menu"></i>
+    <nav class="container">
+        <div class="toggle-menu">
+            <div class="list">
+                    <div class="btn btn-top item">
+                        <a class="fixed_a" href="#">Tư vấn đặt tiệc</a>
+                    </div>
+                <a class="item" href="#"><img class="logo" src="./images/logo.png" alt=""></a>
+                <a class="fixed_a item item-text" href="#">Item</a>
+                <a class="fixed_a item item-text" href="#">Item</a>
+                <a class="fixed_a item item-text" href="#">Item</a>
+                <a class="fixed_a item item-text" href="#">Item</a>
+                <a class="fixed_a item item-text" href="#">Item</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        let menu=document.querySelector("#icon-menu");
+        let container=document.querySelector(".container")
+        menu.addEventListener("click",()=>{
+            container.classList.toggle("active");
+            menu.classList.toggle("bx-menu");
+            menu.classList.toggle("bx-x");
+        });
+        container.addEventListener("scroll",()=>{
+            container
+        })
+    </script>
+</body>
+</html>

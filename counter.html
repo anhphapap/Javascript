@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+            color: white;
+            background-color: lightgray;
+            border: none;
+            border-radius: 100rem;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:20px;
+        }
+        .num{
+            font-size: 100px;
+            font-weight: 700;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="minus">-</button>
+        <div class="num">0</div>
+        <button class="plus">+</button>
+    </div>
+    <script>
+        let p=document.querySelector(".plus");
+        let m=document.querySelector(".minus");
+        let n=document.querySelector(".num");
+        p.addEventListener("click",()=>{
+            let temp=Number(n.innerText)+1;
+            n.innerText=temp;
+        })
+        m.addEventListener("click",()=>{
+            let temp=Number(n.innerText)-1;
+            if(temp>=0) n.innerText=temp;
+        })
+    </script>
+</body>
+</html>

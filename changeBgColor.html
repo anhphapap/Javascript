@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: Lato700;
+            src: url(./Lato\ Bold.ttf);
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: Lato400;
+            src: url(./Lato\ Regular.ttf);
+            font-weight: 400;
+        }
+        button{
+            border: none;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            margin: 50px auto;
+            display: block;
+            border-radius: 10px;
+            font-family:Lato700;
+            /* font-size: 72px; */
+        }
+    </style>
+</head>
+<body>
+    <button>Đổi màu</button>
+    <script>
+        let button=document.querySelector("button");
+        button.addEventListener("click",()=>{
+            let rad=()=>{
+                return Math.floor(Math.random()*256);
+            };
+            let color=`rgb(${rad()},${rad()},${rad()})`;
+            console.log(color);
+            document.body.style.backgroundColor=color;
+        })
+    </script>
+</body>
+</html>
